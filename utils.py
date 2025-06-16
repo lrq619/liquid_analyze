@@ -41,9 +41,6 @@ class RequestData:
         if "message" in response.keys():
             self.error_msg = response['message']
             return
-        if "usage" not in response.keys():
-            self.error_msg = "no usage collected!"
-            return
         self.error_msg = ""
         usage = response['usage']
         self.prompt_tokens = usage['prompt_tokens']
