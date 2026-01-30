@@ -3,7 +3,7 @@ FROM python:3.12-slim
 # Install system dependencies
 RUN apt update && apt install -y curl tar && rm -rf /var/lib/apt/lists/*
 # Install Python deps
-RUN pip install --no-cache-dir requests
+RUN pip install --no-cache-dir requests numpy
 # Set Prometheus version
 ENV PROMETHEUS_VERSION=2.52.0
 
